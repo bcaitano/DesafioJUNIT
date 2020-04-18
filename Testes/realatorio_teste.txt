@@ -27,3 +27,20 @@ class JunitTeste {
 	}
 
 }
+
+
+2- Ao criar a Classe JulgamentoPrisioneiro foi constatado um erro de compilação, pois havia uma classe Resposta que não foi criada. Sendo assim, criei um enum class para resolver tal problema.
+Código do ENUM:
+	public enum Resposta {
+       		culpado, inocente
+	} 
+
+Como próximo passo testei a JUNIT com o método calculaPessoa da classe JulgamentoPrisioneiro, porém houve um erro:
+	
+	org.opentest4j.AssertionFailedError: expected: <5> but was: <15>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+
+O erro foi detectado nos valores da variavel da Classe JulgamentoPrisioneiro. Sendo assim, para arrumar tal problema alterei os valores para o dado pelo Analista.
+	
+
