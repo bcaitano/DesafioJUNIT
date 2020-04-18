@@ -61,5 +61,9 @@ Código:
  return PENA_CONDENACAO_CUMPLICES;
 
 
+ - Dectei o erro no quarto retorno da Classe. Alterei de acordo com o Algoritimo do Analista
+Código:
+ return PENA_INOCENCIA;
+
 	
 
