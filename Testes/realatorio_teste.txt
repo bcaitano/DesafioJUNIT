@@ -42,5 +42,14 @@ Como próximo passo testei a JUNIT com o método calculaPessoa da classe Julgame
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 
 O erro foi detectado nos valores da variavel da Classe JulgamentoPrisioneiro. Sendo assim, para arrumar tal problema alterei os valores para o dado pelo Analista.
+
+
+3 - Assim que encontrado o erro alterei os valores das variaveis da Classe JulgamentoPrisioneiro para os valores que o Anlista forneceu no algoritmo.
+	private int PENA_INOCENCIA = 0;
+   	private int PENA_CONDENACAO_MUTUA = 5;
+   	private int PENA_CONDENACAO_INDIVIDUAL = 10;
+   	private int PENA_CONDENACAO_CUMPLICES = 1;
+
+
 	
 
