@@ -61,9 +61,64 @@ Código:
  return PENA_CONDENACAO_CUMPLICES;
 
 
- - Dectei o erro no quarto retorno da Classe. Alterei de acordo com o Algoritimo do Analista
+6 - Dectei o erro no quarto retorno da Classe. Alterei de acordo com o Algoritimo do Analista
 Código:
  return PENA_INOCENCIA;
 
+
+
+
+CÓDIGO FINAL JUNIT TESTE
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class JunitTeste {
+
+	@Test
+	void testJulgamentoPrisioneiro() {
+		
+		int PENA_INOCENCIA = 0;
+		int PENA_CONDENACAO_MUTUA = 5;
+		int PENA_CONDENACAO_INDIVIDUAL = 10;
+		int PENA_CONDENACAO_CUMPLICES = 1;
+
+		JulgamentoPrisioneiro prisionA = new JulgamentoPrisioneiro();
+		
+		int expectedResult = PENA_CONDENACAO_CUMPLICES;
+		int realResult = prisionA.calculaPena(Resposta.inocente, Resposta.inocente);
+		
+		assertEquals(expectedResult, realResult);
+		
+	}
+
+}
+
+
+CÓDIGO FINAL CLASSE
+
+public class JulgamentoPrisioneiro {
+   private int PENA_INOCENCIA = 0;
+   private int PENA_CONDENACAO_MUTUA = 5;
+   private int PENA_CONDENACAO_INDIVIDUAL = 10;
+   private int PENA_CONDENACAO_CUMPLICES = 1;
+
+   public int calculaPena(Resposta respostaPrisioneiroA, Resposta respostaPrisioneiroB) {
+      if (respostaPrisioneiroA == Resposta.culpado) {
+          if (respostaPrisioneiroB == Resposta.culpado) {
+            return PENA_CONDENACAO_MUTUA;
+          } else {
+                 return PENA_CONDENACAO_INDIVIDUAL;
+                 }
+       } else {
+                if (respostaPrisioneiroB == Resposta.culpado) {
+                    return PENA_CONDENACAO_CUMPLICES;
+                } else {
+                         return PENA_INOCENCIA;
+                        }
+                }
+     }
+}
 	
 
