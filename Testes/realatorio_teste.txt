@@ -56,5 +56,10 @@ Código:
 return PENA_CONDENACAO_INDIVIDUAL; 
 
 
+5 - Dectei o erro no terceiro retorno da Classe. Alterei de acordo com o Algoritimo do Analista
+Código:
+ return PENA_CONDENACAO_CUMPLICES;
+
+
 	
 
